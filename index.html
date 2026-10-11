@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Christ or Nothing | Premium Faith-Based Apparel</title>
+    <meta name="description" content="Christ or Nothing — premium faith-driven streetwear. Shop t-shirts, hoodies, sweaters and headwear. Order via WhatsApp: 069 372 3182.">
+    <meta name="theme-color" content="#070707">
+    <meta property="og:title" content="Christ or Nothing | Premium Faith-Based Apparel">
+    <meta property="og:description" content="Premium faith-driven streetwear for the modern believer.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/logo.png">
+    
+    <!-- Favicon - logo.png as website icon -->
+    <link rel="icon" type="image/png" sizes="48x48" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
+    <link rel="shortcut icon" href="images/logo.png">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="preloader" role="status" aria-label="Loading">
+        <div class="preloader-inner">
+            <div class="preloader-ring">
+                <img src="images/logo.png" alt="" class="preloader-logo">
+            </div>
+            <div class="preloader-brand">CHRIST OR NOTHING</div>
+            <div class="preloader-bar"><span></span></div>
+            <div class="preloader-tag">Faith in every stitch</div>
+        </div>
+    </div>
+    <script>
+        (function () {
+            var start = Date.now(), done = false;
+            function hide() {
+                if (done) return; done = true;
+                var el = document.getElementById('preloader');
+                if (!el) return;
+                el.classList.add('preloader-hidden');
+                document.body.classList.remove('is-loading');
+                setTimeout(function () { el.parentNode && el.parentNode.removeChild(el); }, 800);
+            }
+            document.body.classList.add('is-loading');
+            window.addEventListener('load', function () {
+                setTimeout(hide, Math.max(0, 1200 - (Date.now() - start)));
+            });
+            setTimeout(hide, 5000); // safety net if a resource is slow
+        })();
+    </script>
+    <div class="announce-bar"><i class="fas fa-cross"></i> Premium faith-driven streetwear <i class="fas fa-cross"></i> Order via WhatsApp 069 372 3182</div>
+
+    <!-- Header / Navigation -->
+    <header id="mainHeader">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo-area">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Christ or Nothing Logo" class="logo-img" id="siteLogo" onerror="this.src='https://placehold.co/200x200/000000/FFFFFF?text=✝️'">
+                    </a>
+                    <a href="index.html" class="brand-name">CHRIST OR NOTHING</a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#" id="aboutLink" class="about-hyperlink">About</a></li>
+                    <li><a href="#tshirts">Tshirts</a></li>
+                    <li><a href="#hoodies">Hoodies</a></li>
+                    <li><a href="#sweaters">Sweaters</a></li>
+                    <li><a href="#headwear">Headwear</a></li>
+                    <li><a href="#contacts">Contacts</a></li>
+                </ul>
+                <div class="cart-icon" id="cartIcon" role="button" tabindex="0" aria-label="Open cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text" data-aos="fade-up" data-aos-duration="1000">
+                    <span class="hero-tagline">EST. 2018</span>
+                    <h1 class="hero-title">CHRIST OR NOTHING</h1>
+                    <div class="hero-divider"></div>
+                    <p class="hero-subtitle">Premium faith-driven streetwear for the modern believer</p>
+                    <div class="hero-buttons">
+                        <a href="#tshirts" class="btn-primary">Shop Collection</a>
+                        <a href="#" id="aboutLinkHero" class="btn-secondary">Our Story</a>
+                    </div>
+                </div>
+            </div>
+            <a href="#tshirts" class="scroll-hint" aria-label="Scroll to collection">Scroll</a>
+        </section>
+
+        <!-- Trust Strip -->
+        <section class="trust-strip">
+            <div class="container trust-grid">
+                <div class="trust-item"><i class="fas fa-gem"></i><div><strong>Premium Quality</strong><span>Heavyweight fabrics</span></div></div>
+                <div class="trust-item"><i class="fas fa-cross"></i><div><strong>Faith-Driven</strong><span>Designed with purpose</span></div></div>
+                <div class="trust-item"><i class="fas fa-truck-fast"></i><div><strong>Fast Delivery</strong><span>Nationwide shipping</span></div></div>
+                <div class="trust-item"><i class="fab fa-whatsapp"></i><div><strong>Easy Ordering</strong><span>Quote via WhatsApp</span></div></div>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Hidden About Modal -->
+            <div id="aboutModal" class="about-modal">
+                <div class="about-modal-content">
+                    <span class="about-close">&times;</span>
+                    <div class="about-modal-body">
+                        <h2>Our Story</h2>
+                        <div class="about-divider"></div>
+                        <p>Christ or Nothing is a faith-driven streetwear brand built on the foundation of truth. We believe fashion is a powerful medium to declare the gospel boldly and unapologetically.</p>
+                        <p>Every piece we create is crafted with premium materials and designed to spark conversations about faith. Whether you're in the streets or in the sanctuary, wear your testimony with confidence.</p>
+                        <div class="about-quote">
+                            <i class="fas fa-cross"></i>
+                            <span>"Christ is either Lord of all, or He is not Lord at all."</span>
+                        </div>
+                        <p><strong>Romans 1:16</strong> — For I am not ashamed of the gospel, for it is the power of God for salvation to everyone who believes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- T-SHIRTS SECTION -->
+            <section id="tshirts" class="section">
+                <h2 class="section-title" data-aos="fade-up">T-Shirts</h2>
+                <div class="products-grid" id="tshirtsGrid"></div>
+            </section>
+
+            <!-- HOODIES SECTION -->
+            <section id="hoodies" class="section">
+                <h2 class="section-title" data-aos="fade-up">Hoodies</h2>
+                <div class="products-grid" id="hoodiesGrid"></div>
+            </section>
+
+            <!-- SWEATERS SECTION -->
+            <section id="sweaters" class="section">
+                <h2 class="section-title" data-aos="fade-up">Sweaters</h2>
+                <div class="products-grid" id="sweatersGrid"></div>
+            </section>
+
+            <!-- HEADWEAR SECTION -->
+            <section id="headwear" class="section">
+                <h2 class="section-title" data-aos="fade-up">Headwear</h2>
+                <div class="products-grid" id="headwearGrid"></div>
+            </section>
+
+            <!-- CONTACTS SECTION -->
+            <section id="contacts" class="section">
+                <h2 class="section-title" data-aos="fade-up">Contact</h2>
+                <div class="contact-grid">
+                    <a class="contact-card" href="https://wa.me/27693723182" target="_blank" rel="noopener" data-aos="fade-up" data-aos-duration="600">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3>WhatsApp</h3>
+                        <p>069 372 3182</p>
+                        <span class="contact-note">Order inquiries & quotations</span>
+                    </a>
+                    <a class="contact-card" href="mailto:christornothing144@gmail.com" data-aos="fade-up" data-aos-delay="100" data-aos-duration="600">
+                        <div class="contact-icon">
+                            <i class="far fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>christornothing144@gmail.com</p>
+                        <span class="contact-note">General inquiries</span>
+                    </a>
+                </div>
+                <div class="contact-message" data-aos="fade-up">
+                    <i class="fas fa-info-circle"></i>
+                    <p>Add items to your cart and request a quotation via WhatsApp. We'll respond with pricing and availability.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo"><i class="fas fa-cross"></i>CHRIST OR NOTHING</div>
+                <p class="footer-tagline">Faith in every stitch</p>
+                <ul class="footer-links">
+                    <li><a href="#tshirts">T-Shirts</a></li>
+                    <li><a href="#hoodies">Hoodies</a></li>
+                    <li><a href="#sweaters">Sweaters</a></li>
+                    <li><a href="#headwear">Headwear</a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+                </ul>
+                <a class="footer-phone" href="tel:+27693723182"><i class="fas fa-phone"></i> 069 372 3182</a>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Christ or Nothing. All rights reserved.</p>
+                    <p>Created by <a href="https://chitsurolazarus-alt.github.io/L.C-WebCrafts-Studios/" target="_blank" rel="noopener">L.C WebCrafts Studios</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/27693723182" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3><i class="fas fa-shopping-bag"></i> Your Cart</h3>
+                <button id="closeCartBtn" class="close-modal">&times;</button>
+            </div>
+            <div id="cartItemsList" class="cart-items">
+                <div class="empty-cart">Your cart is empty</div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total" id="cartTotalPrice">Total Items: 0</div>
+                <div class="cart-total-amount" id="cartTotalAmount">Total: R 0</div>
+                <button id="whatsappOrderBtn" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Checkout via WhatsApp
+                </button>
+                <button id="clearCartBtn" class="clear-cart-btn">Clear Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#070707">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Product Detail | Christ or Nothing</title>
+    
+    <!-- Favicon - logo.png as website icon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
+    <link rel="shortcut icon" href="images/logo.png">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="preloader" role="status" aria-label="Loading">
+        <div class="preloader-inner">
+            <div class="preloader-ring">
+                <img src="images/logo.png" alt="" class="preloader-logo">
+            </div>
+            <div class="preloader-brand">CHRIST OR NOTHING</div>
+            <div class="preloader-bar"><span></span></div>
+            <div class="preloader-tag">Faith in every stitch</div>
+        </div>
+    </div>
+    <script>
+        (function () {
+            var start = Date.now(), done = false;
+            function hide() {
+                if (done) return; done = true;
+                var el = document.getElementById('preloader');
+                if (!el) return;
+                el.classList.add('preloader-hidden');
+                document.body.classList.remove('is-loading');
+                setTimeout(function () { el.parentNode && el.parentNode.removeChild(el); }, 800);
+            }
+            document.body.classList.add('is-loading');
+            window.addEventListener('load', function () {
+                setTimeout(hide, Math.max(0, 1200 - (Date.now() - start)));
+            });
+            setTimeout(hide, 5000); // safety net if a resource is slow
+        })();
+    </script>
+    <div class="announce-bar"><i class="fas fa-cross"></i> Premium faith-driven streetwear <i class="fas fa-cross"></i> Order via WhatsApp 069 372 3182</div>
+
+    <!-- Header / Navigation -->
+    <header id="mainHeader">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo-area">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Christ or Nothing Logo" class="logo-img" onerror="this.src='https://placehold.co/200x200/000000/FFFFFF?text=✝️'">
+                    </a>
+                    <a href="index.html" class="brand-name">CHRIST OR NOTHING</a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html#tshirts">Tshirts</a></li>
+                    <li><a href="index.html#hoodies">Hoodies</a></li>
+                    <li><a href="index.html#sweaters">Sweaters</a></li>
+                    <li><a href="index.html#headwear">Headwear</a></li>
+                    <li><a href="index.html#contacts">Contact</a></li>
+                </ul>
+                <div class="cart-icon" id="cartIcon" role="button" tabindex="0" aria-label="Open cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Product Detail Section -->
+        <div class="product-detail" id="productDetail" data-aos="fade-up" data-aos-duration="800"></div>
+
+        <!-- Recommendations Section -->
+        <section class="recommendations-section">
+            <h2 class="section-title" data-aos="fade-up">You May Also Like</h2>
+            <div class="recommendations-grid" id="recommendationsGrid" data-aos="fade-up" data-aos-delay="200"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo"><i class="fas fa-cross"></i>CHRIST OR NOTHING</div>
+                <p class="footer-tagline">Faith in every stitch</p>
+                <ul class="footer-links">
+                    <li><a href="index.html#tshirts">T-Shirts</a></li>
+                    <li><a href="index.html#hoodies">Hoodies</a></li>
+                    <li><a href="index.html#sweaters">Sweaters</a></li>
+                    <li><a href="index.html#headwear">Headwear</a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+                </ul>
+                <a class="footer-phone" href="tel:+27693723182"><i class="fas fa-phone"></i> 069 372 3182</a>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Christ or Nothing. All rights reserved.</p>
+                    <p>Created by <a href="https://chitsurolazarus-alt.github.io/L.C-WebCrafts-Studios/" target="_blank" rel="noopener">L.C WebCrafts Studios</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/27693723182" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3><i class="fas fa-shopping-bag"></i> Your Cart</h3>
+                <button id="closeCartBtn" class="close-modal">&times;</button>
+            </div>
+            <div id="cartItemsList" class="cart-items">
+                <div class="empty-cart">Your cart is empty</div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total" id="cartTotalPrice">Total Items: 0</div>
+                <div class="cart-total-amount" id="cartTotalAmount">Total: R 0</div>
+                <button id="whatsappOrderBtn" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Checkout via WhatsApp
+                </button>
+                <button id="clearCartBtn" class="clear-cart-btn">Clear Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
